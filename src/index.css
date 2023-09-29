@@ -1,0 +1,118 @@
+/* styles.css */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #201f1f;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 6rem;
+	height: 70vh;
+}
+
+#logo {
+	font-size: 3rem;
+	font-weight: bold;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-image: linear-gradient(to bottom, #f2f2f2, #999999);
+	letter-spacing: 0.1em;
+}
+
+form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	align-items: center;
+	margin-bottom: 3rem;
+}
+
+form svg {
+	position: absolute;
+	left: 1rem;
+	top: 2.4rem;
+}
+
+input[name="query"] {
+	padding-left: 3rem;
+	background-color: #333;
+	font-size: 18px;
+	color: #fff;
+	padding: 1rem;
+	padding-left: 3rem;
+	width: 24rem;
+	border: 2px solid #333;
+	border-radius: 9999px;
+	outline: none;
+	transition: all 0.3s;
+}
+
+input[name="query"]:focus-visible {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+input[type="submit"] {
+	background-color: #3384e0;
+	color: white;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 9999px;
+	cursor: pointer;
+	transition: opacity 0.3s;
+}
+
+input[type="submit"]:hover {
+	opacity: 0.9;
+}
+input[type="submit"]:focus {
+	outline: none;
+	opacity: 0.9;
+}
+
+#result {
+	display: none;
+	padding: 0.9rem 1.6rem;
+	width: 24rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+	background-color: rgb(45, 44, 44);
+	color: white;
+	font-size: 18px;
+}
+
+#loading-indicator {
+	display: none;
+	background-color: rgb(45, 44, 44);
+	width: 24rem;
+	height: 11rem;
+	padding: 0.9rem 1.6rem;
+	border-radius: 0.5rem;
+	color: white;
+	font-size: 18px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+#loading-indicator p span {
+	display: inline-block;
+	background-color: rgb(81, 80, 80);
+	width: 5rem;
+	height: 1rem;
+	border-radius: 5px;
+	animation: loading 1.5s infinite ease-in-out;
+}
+
+/* Define the loading animation */
+@keyframes loading {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.7;
+	}
+	100% {
+		opacity: 0;
+	}
+}
